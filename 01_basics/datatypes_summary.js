@@ -2,17 +2,17 @@
 
 //  7 types : string, number, boolean, null, undefiend, symbol, BigInt
 
-const score = 100
-const scoreValue = 100.3
+// const score = 100
+// const scoreValue = 100.3
 
-const isLoggedIn= false
-const outsideTemp =null
-let userEmail; 
+// const isLoggedIn= false
+// const outsideTemp =null
+// let userEmail; 
 
-const id = symbol('123')
-const anotherId = symbol('123')
+// const id = symbol('123')
+// const anotherId = symbol('123')
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 // const bigNumber = 464613545464n 
 
@@ -20,15 +20,46 @@ console.log(id === anotherId);
 
 // Array, Object, Functions
 
-const heros = ["shaktiman", "naagraaj", "maas"];
-let myObj = {
-    name : "Aditya",
-    age :  "22"
-}
+// const heros = ["shaktiman", "naagraaj", "maas"];
+// let myObj = {
+//     name : "Aditya",
+//     age :  "22"
+// }
 
-const myFunction = function (){
-    console.log("Hello world");
+// const myFunction = function (){
+//     console.log("Hello world");
     
+// }
+
+// console.log(typeof heros);
+
+
+
+
+
+
+
+// ************************************Stack(Primitive), Heap (Non-Primitive)
+
+
+let myWebsitename = "Adityapawardotcom"
+
+let anothername = myWebsitename
+
+anothername = "codewithaadi"
+
+console.log(myWebsitename);
+console.log(anothername);
+
+let userOne = {
+    email: "user@gmail.com", 
+    upi: "user@ybl"
 }
 
-console.log(typeof heros);
+
+userTwo = userOne
+
+userTwo.email = "aditya@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;" >
+    <h1>Amazing Photos</h1>
+    <ul id="images">
+        <li> <img width="200px" id="photoshop" src="https://images.pexels.com/photos/29734969/pexels-photo-29734969/free-photo-of-scenic-view-of-matterhorn-in-autumn-from-zermatt.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""> </li>
+        <li> <img width="200px" id="photoshop" src="https://images.pexels.com/photos/29764961/pexels-photo-29764961/free-photo-of-scenic-winter-village-with-mountain-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""> </li>
+        <li> <img width="200px" id="night mountain" src="https://images.pexels.com/photos/29772130/pexels-photo-29772130/free-photo-of-starry-night-over-utah-s-desert-cliffs.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""  ></li>
+        <li> <img width="200px" id="photoshop" src="https://images.pexels.com/photos/29758264/pexels-photo-29758264/free-photo-of-aerial-view-of-snowy-mountain-path-and-lake.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""> </li>
+        <li> <img width="200px" id="photoshop" src="https://images.pexels.com/photos/29731450/pexels-photo-29731450/free-photo-of-scenic-mountain-landscape-with-snow-capped-peaks.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""> </li>
+        <li><a style="color: aliceblue;" href="www.google.com" id="google" >Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('night mountain').onclick = function () {
+    //     alert("night mountain")
+    // }
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('night mountain').addEventListener('click', function(e){
+    //     console.log("night mountain clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+    })
+    
+    //removeIt.parentNode.removeChild(removeIt)
+    
+</script>
+</html>
